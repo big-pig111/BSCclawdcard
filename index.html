@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClawdCard - 网页展示</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      z-index: 10;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .topbar-logo {
+      height: 48px;
+      width: auto;
+      display: block;
+      flex-shrink: 0;
+    }
+    .topbar-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .topbar-docs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #a0a0b0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .topbar-docs:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+    }
+    .topbar-docs svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <img class="topbar-logo" src="./clawdcard.svg" alt="ClawdCard" />
+      <span class="topbar-name">BSCclawdcard</span>
+    </div>
+    <a class="topbar-docs" href="https://www.clawdcard.xyz/docs" target="_blank" rel="noopener" title="文档">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+      <span>文档</span>
+    </a>
+  </header>
+  <iframe src="https://www.clawdcard.xyz/" title="ClawdCard"></iframe>
+</body>
+</html>
